@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+{% load static %}
+
+<title>E-Travels: About</title>
+<link href="{% static "home/css/bootstrap.css"%}" rel="stylesheet" type="text/css" media="all">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static "home/js/jquery-1.11.0.min.js" %}"></script>
+<!-- Custom Theme files -->
+<link href="{% static "home/css/style.css" %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="e-travels" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+<!-- //end-smoth-scrolling -->
+<link rel="stylesheet" href="{% static "home/css/flexslider.css" %}" type="text/css" media="screen" />
+</head>
+<body>
+<!--header start here-->
+ <div class="header">
+   <div class="container">
+     <div class="header-main">
+		<div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+			<a href= "{% url "home:index" %}"><h1 style="font-size:50px; font-weight:800;
+			background: -webkit-linear-gradient(45deg, #079f, #00ff95 80%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent;">E - Travels</h1></a>
+	   </div>
+	   <div class="top-navg">
+			   <span class="menu"> <img src="{% static "home/images/icon.png" }" alt=""/></span>
+			  <nav class="cl-effect-13">				
+				<ul class="res">
+					<li><a href="{% url "home:index" %}">Home</a></li>
+					<li><a class="active" href="{% url "home:about" %}">About</a></li>
+					<li><a href="{% url "home:offer" %}">Walks</a></li>
+					<li><a href="{% url "blog:blog" %}">Blog</a></li>
+					<li><a href="{% url "home:contact" %}">Contact</a></li>
+				</ul>
+			 </nav>
+			<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.res" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+				</script>					
+	   </div>
+	    <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+<!--header end here-->
+
+<!--about start here-->
+<div class="about">
+	<div class="container">
+		<div class="about-main">
+			 <h1>About Us</h1>
+			 <span class="lft-bar-about"> </span>
+			 <span class="rit-bar-about"> </span>
+           <div class="col-md-6 about-left wow bounceInLeft" data-wow-delay="0.3s">
+			   <h1 style="
+			   margin-right:90px; margin-left:-140px; margin-top:150px; font-size:100px;
+               	background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><b>E - Travels</b></h1>
+           </div>
+           <div class="col-md-6 about-right wow bounceInRight" data-wow-delay="0.3s">
+           	 <h4>A mission to make people experience the city</h4>
+						<p>With a mission to make people experience the city the way we see it,
+						 The E-Travels came into existence. We're a group of university students
+						  encouraged to change the perspective of India by providing more insights 
+							into this wonderful country, starting from the centre of the country, New Delhi.
+							 Being passionate travellers ourselves, we firmly believe that walking is the 
+							 best way to discover a new place. We have walked the trails ourselves to bring 
+							 out the best way to make you immerse yourselves into the local culture, traditions,
+							  food and history of the destination. Keeping in mind the diverse needs and 
+							interests of the people, we have options of customized walking tours so that
+							 you can explore what interests you the most while being on a budget.
+
+					How we are different?
+
+					We're a team of passionate students who are motivated to provide travellers with a truly local 
+					experience while being on a budget. We customize our tours according to your interests. Each of
+ 					our tours has fixed itineraries but no script so that we can indulge you into the conversations 
+					with things you're passionate about while discovering the city on foot.</p>
+		        <div class="clearfix"> </div>
+              </div>
+           </div>
+          <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- FlexSlider -->
+				  <script defer src="{% static "home/js/jquery.flexslider.js" %}"></script>
+				  <script type="text/javascript">
+					$(function(){
+					 
+					});
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				  </script>
+			<!-- FlexSlider -->
+
+
+<!--about end here-->
+<!--footer start here-->
+<div class="map">
+  <div class="footer">
+	<div class="container">
+		<div class="footer-main">
+			<div class="col-md-4 ftr-grids  wow bounceIn" data-wow-delay="0.4s">
+				<h4>Get in Touch</h4>
+				<ul class="get-touch">
+				
+					<li><span class="email"> </span><a href="mailto:connect@thehomes.com">connect@theetravels.com</a> </li>
+					<!--	<li><span class="phone"> </span>+91 86795 40001</li> -->
+				</ul>
+			</div>
+			<div class="col-md-4 ftr-grids  wow bounceIn" data-wow-delay="0.4s">
+				<h4>Follow Us</h4>
+				<ul class="mid-grid">
+					<li><a href="#"><span class="tw"> </span></a></li>
+					<li><a href="#"><span class="gmail"> </span></a> </li>
+					<li><a href="#"><span class="inst"> </span></a> </li>
+					<li><a href="#"><span class="pri"> </span></a> </li>					
+				</ul>
+			</div>
+			
+<!--footer end here-->
+</body>
+</html>
